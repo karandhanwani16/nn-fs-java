@@ -11,7 +11,7 @@
 
 // export default Counter;
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 function Counter(props) {
   // var count = 0;
@@ -21,6 +21,8 @@ function Counter(props) {
   const { bg, clr, fs, buttonPadding } = props;
 
   const [count, setCount] = useState(0);
+
+  
 
   const handleIncrement = () => {
     setCount(count + 1);
