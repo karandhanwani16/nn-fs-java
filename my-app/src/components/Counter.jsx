@@ -11,7 +11,7 @@
 
 // export default Counter;
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 
 function Counter(props) {
   // var count = 0;
@@ -22,14 +22,25 @@ function Counter(props) {
 
   const [count, setCount] = useState(0);
 
-  
-
   const handleIncrement = () => {
     setCount(count + 1);
   };
   const handleDecrement = () => {
     setCount(count - 1);
   };
+
+  useEffect(() => {
+    console.log("Component Mounted");
+
+    return () => {
+      console.log("Component unMounted");
+    };
+  }, []); // useEffect(callback Function, dependency Array)
+
+
+  useEffect(()=>{
+    console.log("Component Updated")
+  },[count]);
 
   return (
     <div
@@ -41,9 +52,7 @@ function Counter(props) {
         borderRadius: "12px",
       }}
     >
-      <h1 style={{ color: clr, textAlign: "center", fontSize: fs }}>
-        {count}
-      </h1>
+      <h1 style={{ color: clr, textAlign: "center", fontSize: fs }}>{count}</h1>
       <div style={{ display: "flex", gap: "12px" }}>
         <button
           style={{
@@ -75,6 +84,5 @@ function Counter(props) {
 }
 
 export default Counter;
-
 
 // new line added

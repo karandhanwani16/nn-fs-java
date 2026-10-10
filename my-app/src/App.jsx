@@ -19,7 +19,7 @@ function App() {
       <br />
       <br />
       {isVisible && (
-        <Counter fs="32px" buttonPadding="12px 40px" bg="olive" clr="beige" />
+        <Counter fs="40px" buttonPadding="12px 40px" bg="olive" clr="beige" />
       )}
 
       {/* <Counter fs="40px" buttonPadding="8px 4px" bg="blue" clr="skyblue" />
