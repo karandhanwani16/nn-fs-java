@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Counter from "./components/Counter";
 import FruitList from "./components/FruitList";
+import Forms from "./components/Forms";
 
 function App() {
   const [isVisible, setIsVisible] = useState(false);
@@ -11,9 +12,11 @@ function App() {
 
   return (
     <div>
-      <h1>Hello World</h1>
+      <Forms />
 
-      <button onClick={handleCounterVisibility}>
+      {/* <h1>Hello World</h1> */}
+
+      {/* <button onClick={handleCounterVisibility}>
         {isVisible ? "Hide" : "Show"}
       </button>
       <br />
@@ -21,9 +24,9 @@ function App() {
       <br />
       {isVisible && (
         <Counter fs="40px" buttonPadding="12px 40px" bg="olive" clr="beige" />
-      )}
+      )} */}
 
-      <FruitList />
+      {/* <FruitList /> */}
 
       {/* <Counter fs="40px" buttonPadding="8px 4px" bg="blue" clr="skyblue" />
       <Counter
