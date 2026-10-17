@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Counter from "./components/Counter";
+import FruitList from "./components/FruitList";
 
 function App() {
   const [isVisible, setIsVisible] = useState(false);
@@ -21,6 +22,8 @@ function App() {
       {isVisible && (
         <Counter fs="40px" buttonPadding="12px 40px" bg="olive" clr="beige" />
       )}
+
+      <FruitList />
 
       {/* <Counter fs="40px" buttonPadding="8px 4px" bg="blue" clr="skyblue" />
       <Counter
